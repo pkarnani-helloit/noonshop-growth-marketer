@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noon Shop Growth Marketer Profile</title>
+<style>
+  :root{
+    --navy:#0f2747;
+    --navy-2:#163a63;
+    --navy-3:#21507f;
+    --accent:#3a7bd5;
+    --ink:#1f2733;
+    --muted:#5b6677;
+    --line:#e3e8ef;
+    --bg:#f4f6f9;
+    --card:#ffffff;
+    --soft:#eef2f7;
+    --green:#2f7d5b;
+    --red:#a3475a;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1060px;margin:0 auto;padding:0 26px 80px;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);
+    color:#fff;
+    padding:54px 26px 48px;
+    text-align:center;
+  }
+  .hero .inner{max-width:1060px;margin:0 auto;}
+  .eyebrow{
+    text-transform:uppercase;letter-spacing:3px;font-size:12px;
+    color:#9fc0e8;font-weight:600;margin-bottom:14px;
+  }
+  .hero h1{margin:0 0 14px;font-size:38px;line-height:1.15;font-weight:700;}
+  .hero p{margin:0 auto;max-width:720px;font-size:17px;color:#d4e0f0;}
+
+  /* ---------- Section shell ---------- */
+  section{margin-top:46px;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:20px;}
+  .sec-num{
+    flex:0 0 auto;width:38px;height:38px;border-radius:9px;
+    background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;
+    font-weight:700;font-size:16px;
+  }
+  .sec-head h2{margin:0;font-size:24px;color:var(--navy);font-weight:700;}
+  .sec-head .sub{font-size:14px;color:var(--muted);margin-top:2px;}
+
+  /* ---------- Purpose ---------- */
+  .purpose{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:28px 30px;box-shadow:0 1px 3px rgba(15,39,71,.05);
+  }
+  .purpose .lead{font-size:18px;color:var(--navy);font-weight:600;margin:0 0 16px;}
+  .twoq{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px;}
+  .qcard{
+    background:var(--soft);border-left:4px solid var(--accent);border-radius:10px;
+    padding:16px 18px;font-size:15px;font-weight:600;color:var(--navy);
+  }
+  .qcard span{display:block;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:600;margin-bottom:6px;}
+  .measure{margin-top:18px;font-size:14px;color:var(--muted);}
+  .measure b{color:var(--ink);}
+
+  /* ---------- Mindset tags ---------- */
+  .mindset-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:center;}
+  .tags{display:flex;flex-wrap:wrap;gap:9px;}
+  .tag{
+    background:#fff;border:1px solid var(--line);border-radius:30px;
+    padding:8px 15px;font-size:14px;font-weight:600;color:var(--navy-2);
+  }
+  .persona{
+    background:var(--navy);color:#fff;border-radius:14px;padding:24px 26px;
+  }
+  .persona h3{margin:0 0 10px;font-size:16px;color:#9fc0e8;text-transform:uppercase;letter-spacing:1px;}
+  .persona p{margin:0;font-size:16px;line-height:1.5;}
+  .persona .parts{margin-top:14px;font-size:14px;color:#cdddf0;}
+
+  /* ---------- Responsibility cards ---------- */
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:22px 24px;box-shadow:0 1px 3px rgba(15,39,71,.05);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(15,39,71,.10);}
+  .card .icon{
+    width:42px;height:42px;border-radius:10px;background:var(--soft);
+    display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px;
+  }
+  .card h3{margin:0 0 4px;font-size:17px;color:var(--navy);font-weight:700;}
+  .card .role-tag{font-size:12px;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.5px;}
+  .card ul{margin:12px 0 0;padding-left:18px;color:var(--muted);font-size:14px;}
+  .card ul li{margin-bottom:5px;}
+  .card ul li b{color:var(--ink);font-weight:600;}
+
+  /* ---------- Time allocation ---------- */
+  .time-wrap{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:28px 30px;box-shadow:0 1px 3px rgba(15,39,71,.05);
+  }
+  .bar-row{display:flex;align-items:center;gap:16px;margin-bottom:16px;}
+  .bar-row:last-child{margin-bottom:0;}
+  .bar-label{flex:0 0 200px;font-size:14px;font-weight:600;color:var(--navy);}
+  .bar-label small{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:1px;}
+  .bar-track{flex:1;background:var(--soft);border-radius:8px;height:30px;position:relative;overflow:hidden;}
+  .bar-fill{height:100%;border-radius:8px;display:flex;align-items:center;justify-content:flex-end;padding-right:12px;color:#fff;font-weight:700;font-size:13px;}
+
+  /* ---------- Litmus test ---------- */
+  .litmus{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .lit-col{border-radius:14px;padding:24px 26px;border:1px solid var(--line);background:var(--card);}
+  .lit-col.good{border-top:5px solid var(--green);}
+  .lit-col.bad{border-top:5px solid var(--red);}
+  .lit-col h3{margin:0 0 6px;font-size:17px;display:flex;align-items:center;gap:8px;}
+  .lit-col.good h3{color:var(--green);}
+  .lit-col.bad h3{color:var(--red);}
+  .lit-col p.note{margin:0 0 14px;font-size:13px;color:var(--muted);}
+  .lit-col ul{margin:0;padding-left:20px;font-size:15px;color:var(--ink);}
+  .lit-col ul li{margin-bottom:7px;}
+
+  /* ---------- Not need chips ---------- */
+  .not-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .not-chip{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 16px;text-align:center;
+  }
+  .not-chip .x{color:var(--red);font-size:20px;font-weight:700;}
+  .not-chip h4{margin:6px 0 4px;font-size:15px;color:var(--navy);}
+  .not-chip p{margin:0;font-size:12.5px;color:var(--muted);}
+
+  /* ---------- Timeline ---------- */
+  .timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .tl-card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+  .tl-head{background:var(--navy);color:#fff;padding:16px 20px;}
+  .tl-head .when{font-size:13px;color:#9fc0e8;text-transform:uppercase;letter-spacing:1px;font-weight:600;}
+  .tl-head .title{font-size:18px;font-weight:700;margin-top:2px;}
+  .tl-card ul{margin:0;padding:18px 20px 20px 36px;font-size:14px;color:var(--muted);}
+  .tl-card ul li{margin-bottom:7px;}
+
+  /* ---------- Definition ---------- */
+  .definition{
+    background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);
+    color:#fff;border-radius:16px;padding:38px 40px;text-align:center;
+  }
+  .definition h2{margin:0 0 16px;color:#fff;font-size:24px;}
+  .definition p{margin:0 auto;max-width:780px;font-size:17px;line-height:1.6;color:#e3edf8;}
+  .definition .punch{font-size:19px;font-weight:600;color:#fff;margin-top:18px;}
+
+  footer{text-align:center;color:var(--muted);font-size:12.5px;margin-top:50px;}
+
+  @media (max-width:780px){
+    .cards,.twoq,.litmus,.timeline,.mindset-grid{grid-template-columns:1fr;}
+    .not-grid{grid-template-columns:repeat(2,1fr);}
+    .bar-label{flex:0 0 130px;}
+    .hero h1{font-size:30px;}
+  }
+  @media print{
+    body{background:#fff;}
+    .card:hover{transform:none;box-shadow:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="inner">
+    <div class="eyebrow">Noon Shop &nbsp;·&nbsp; Role Profile</div>
+    <h1>Growth Marketer Position</h1>
+    <p>A clear picture of the role, the mindset, and the responsibilities that turn website traffic into revenue, and how to tell the right candidate from the wrong one.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- 1. PURPOSE -->
+  <section>
+    <div class="sec-head">
+      <div class="sec-num">1</div>
+      <div><h2>The Purpose of This Role</h2>
+      <div class="sub">Why the position exists</div></div>
+    </div>
+    <div class="purpose">
+      <p class="lead">Drive qualified traffic to NoonShop.com and convert more of those visitors into customers.</p>
+      <p style="margin:0 0 18px;color:var(--muted);">This is a <b style="color:var(--ink)">growth</b> role focused on customer acquisition, conversion optimization, and marketing performance. It is <b style="color:var(--ink)">not</b> a content-creation or social-media-management role. The person continually answers two questions:</p>
+      <div class="twoq">
+        <div class="qcard"><span>Question One</span>How do we get more qualified visitors to the website?</div>
+        <div class="qcard"><span>Question Two</span>How do we convert more of those visitors into customers?</div>
+      </div>
+      <p class="measure"><b>Success is measured by:</b> increased traffic · higher conversion rates · lower acquisition cost · improved retention · growth in revenue.</p>
+    </div>
+  </section>
+
+  <!-- 2. MINDSET -->
+  <section>
+    <div class="sec-head">
+      <div class="sec-num">2</div>
+      <div><h2>The Type of Marketer We Want</h2>
+      <div class="sub">How they think about the business</div></div>
+    </div>
+    <div class="mindset-grid">
+      <div>
+        <p style="margin-top:0;color:var(--muted);">A practical, results-oriented Internet / Growth Marketer who understands how ecommerce businesses grow online and can connect every piece into one cohesive strategy. They think in terms of:</p>
+        <div class="tags">
+          <span class="tag">Traffic</span>
+          <span class="tag">Funnels</span>
+          <span class="tag">Conversions</span>
+          <span class="tag">Customer Acquisition Cost</span>
+          <span class="tag">Return on Ad Spend</span>
+          <span class="tag">Lifetime Value</span>
+          <span class="tag">Retention</span>
+          <span class="tag">Attribution</span>
+          <span class="tag">Automation</span>
+          <span class="tag">Data</span>
+        </div>
+      </div>
+      <div class="persona">
+        <h3>In one line</h3>
+        <p>Part strategist, part analyst, part technologist, part marketer.</p>
+        <div class="parts">They don't just run campaigns; they build systems that continuously improve results.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. RESPONSIBILITIES -->
+  <section>
+    <div class="sec-head">
+      <div class="sec-num">3</div>
+      <div><h2>What This Person Actually Does</h2>
+      <div class="sub">Seven core areas of responsibility</div></div>
+    </div>
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">📈</div>
+        <div class="role-tag">Acquisition</div>
+        <h3>Traffic Generation</h3>
+        <ul>
+          <li><b>Paid Search:</b> Google Ads, Shopping, Performance Max</li>
+          <li><b>Paid Social:</b> Meta, TikTok, Pinterest, YouTube</li>
+          <li>Audience targeting, retargeting & lookalikes</li>
+          <li>Bid management, budget allocation, ad testing</li>
+          <li>Understands CTR, CPC, ROAS, CAC</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔍</div>
+        <div class="role-tag">Organic</div>
+        <h3>SEO & Organic Growth</h3>
+        <ul>
+          <li>Keyword research & search visibility</li>
+          <li>Product & category page optimization</li>
+          <li>Technical SEO recommendations</li>
+          <li>Content strategy that drives search traffic</li>
+          <li><b>Goal:</b> steadily improve visibility, not become a specialist</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎯</div>
+        <div class="role-tag">Conversion</div>
+        <h3>Conversion Rate Optimization</h3>
+        <ul>
+          <li>Studies where visitors enter, exit & abandon</li>
+          <li>Tackles cart & checkout abandonment</li>
+          <li>Heat mapping & A/B testing</li>
+          <li><b>Tools:</b> GA4, Microsoft Clarity, Hotjar, Lucky Orange</li>
+          <li>Answers <i>why aren't visitors buying?</i></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔁</div>
+        <div class="role-tag">Recovery</div>
+        <h3>Retargeting & Customer Recapture</h3>
+        <ul>
+          <li>Cart & browse abandonment campaigns</li>
+          <li>Product-view & dynamic retargeting ads</li>
+          <li>Abandoned-cart & win-back email sequences</li>
+          <li>Facebook & Google display retargeting</li>
+          <li><b>Often the fastest way to grow revenue without more traffic</b></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="icon">✉️</div>
+        <div class="role-tag">Retention</div>
+        <h3>Email, CRM & Automation</h3>
+        <ul>
+          <li>Customer segmentation & lifecycle marketing</li>
+          <li>Automated flows & trigger-based campaigns</li>
+          <li>Re-engagement & repeat-purchase campaigns</li>
+          <li><b>Platforms:</b> Klaviyo, Mailchimp, HubSpot, Shopify Flow, Zapier</li>
+          <li>Maximizes value of existing customers</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="icon">🛠️</div>
+        <div class="role-tag">Funnels</div>
+        <h3>Funnel Development</h3>
+        <ul>
+          <li><b>Lead magnets:</b> buying guides, checklists, email offers</li>
+          <li><b>Nurture funnels:</b> welcome series, trust building</li>
+          <li><b>Customer funnels:</b> upsell, cross-sell, loyalty</li>
+          <li>Understands visitors rarely buy on first visit</li>
+        </ul>
+      </div>
+
+      <div class="card" style="grid-column:1 / -1;">
+        <div class="icon">📊</div>
+        <div class="role-tag">Measurement</div>
+        <h3>Data, Analytics & Technical Fluency</h3>
+        <ul style="columns:2;column-gap:36px;">
+          <li><b>Traffic:</b> sessions, users, source/medium, organic vs. paid</li>
+          <li><b>Engagement:</b> bounce rate, time on site, pages/session</li>
+          <li><b>Conversion:</b> conversion rate, cart & checkout abandonment</li>
+          <li><b>Advertising:</b> CTR, CPC, CPA, ROAS, CAC</li>
+          <li><b>Customer:</b> repeat rate, lifetime value, retention</li>
+          <li><b>Technical:</b> GA4, Tag Manager, pixels, event tracking, UTMs, Shopify</li>
+        </ul>
+        <p style="margin:14px 0 0;font-size:14px;color:var(--navy);font-weight:600;">Makes decisions based on data, not opinions, and works effectively with developers without being dependent on them. <span style="font-weight:400;color:var(--muted);">(Not a developer or designer.)</span></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. TIME ALLOCATION -->
+  <section>
+    <div class="sec-head">
+      <div class="sec-num">4</div>
+      <div><h2>How They Should Spend Their Time</h2>
+      <div class="sub">A rough weekly allocation</div></div>
+    </div>
+    <div class="time-wrap">
+      <div class="bar-row">
+        <div class="bar-label">Traffic Acquisition<small>Paid ads · SEO · campaigns</small></div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--navy);">40%</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Conversion Optimization<small>Heat maps · funnels · A/B tests</small></div>
+        <div class="bar-track"><div class="bar-fill" style="width:62.5%;background:var(--navy-2);">25%</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Retention & Automation<small>Email · CRM · retargeting</small></div>
+        <div class="bar-track"><div class="bar-fill" style="width:37.5%;background:var(--navy-3);">15%</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Analytics & Reporting<small>Dashboards · attribution · KPIs</small></div>
+        <div class="bar-track"><div class="bar-fill" style="width:30%;background:var(--accent);">12%</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label">Strategy & Experimentation<small>New channels · growth tests</small></div>
+        <div class="bar-track"><div class="bar-fill" style="width:20%;background:#7ea8de;color:#0f2747;">8%</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. WHAT THIS IS NOT -->
+  <section>
+    <div class="sec-head">
+      <div class="sec-num">5</div>
+      <div><h2>What This Role Is <em>Not</em></h2>
+      <div class="sub">Time should not be consumed by these</div></div>
+    </div>
+    <div class="not-grid">
+      <div class="not-chip"><div class="x">✕</div><h4>Social Media Posting</h4><p>Posting content alone does not drive growth.</p></div>
+      <div class="not-chip"><div class="x">✕</div><h4>Graphic Design</h4><p>This is not a designer role.</p></div>
+      <div class="not-chip"><div class="x">✕</div><h4>Website Development</h4><p>This is not a programmer role.</p></div>
+      <div class="not-chip"><div class="x">✕</div><h4>Marketing Admin</h4><p>Not event planning or vendor management.</p></div>
+    </div>
+  </section>
+
+  <!-- 6. LITMUS TEST -->
+  <section>
+    <div class="sec-head">
+      <div class="sec-num">6</div>
+      <div><h2>The Interview Litmus Test</h2>
+      <div class="sub">Listen for what they talk about most</div></div>
+    </div>
+    <div class="litmus">
+      <div class="lit-col good">
+        <h3>✓ Likely the right fit</h3>
+        <p class="note">If they spend the interview talking about…</p>
+        <ul>
+          <li>Traffic acquisition</li>
+          <li>Conversion rates</li>
+          <li>Retargeting</li>
+          <li>Email automation</li>
+          <li>Customer journeys</li>
+          <li>Website performance</li>
+          <li>Revenue growth</li>
+        </ul>
+      </div>
+      <div class="lit-col bad">
+        <h3>✕ Likely the wrong fit</h3>
+        <p class="note">If they spend the interview talking about…</p>
+        <ul>
+          <li>Content calendars</li>
+          <li>Social media posting</li>
+          <li>Followers</li>
+          <li>Likes</li>
+          <li>Engagement metrics</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. SUCCESS TIMELINE -->
+  <section>
+    <div class="sec-head">
+      <div class="sec-num">7</div>
+      <div><h2>What Success Looks Like</h2>
+      <div class="sub">Expected progression over the first year</div></div>
+    </div>
+    <div class="timeline">
+      <div class="tl-card">
+        <div class="tl-head"><div class="when">First</div><div class="title">90 Days</div></div>
+        <ul>
+          <li>Analytics & tracking fully validated</li>
+          <li>Traffic sources evaluated</li>
+          <li>Funnel mapped end-to-end</li>
+          <li>Retargeting implemented</li>
+          <li>Quick-win opportunities identified</li>
+        </ul>
+      </div>
+      <div class="tl-card">
+        <div class="tl-head"><div class="when">By</div><div class="title">6 Months</div></div>
+        <ul>
+          <li>Increased qualified traffic</li>
+          <li>Improved conversion rates</li>
+          <li>Reduced cart abandonment</li>
+          <li>Improved ROAS</li>
+          <li>Stronger email performance</li>
+        </ul>
+      </div>
+      <div class="tl-card">
+        <div class="tl-head"><div class="when">By</div><div class="title">12 Months</div></div>
+        <ul>
+          <li>Predictable acquisition engine</li>
+          <li>Multiple traffic sources converting</li>
+          <li>Strong retargeting ecosystem</li>
+          <li>Automated customer journeys</li>
+          <li>Measurable revenue & LTV growth</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. DEFINITION -->
+  <section>
+    <div class="definition">
+      <h2>The Simplest Definition</h2>
+      <p>We are <b>not</b> looking for a social media manager, content creator, graphic designer, or marketing coordinator.</p>
+      <p class="punch">We want a growth-focused Internet Marketer who can attract visitors, understand their behavior, optimize their journey, recover lost opportunities, leverage technology and automation, and systematically turn traffic into revenue.</p>
+    </div>
+  </section>
+
+  <footer>
+    Noon Shop · Growth Marketer Role Profile &nbsp;·&nbsp; Prepared for hiring discussion
+  </footer>
+
+</div>
+</body>
+</html>
